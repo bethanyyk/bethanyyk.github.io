@@ -1,0 +1,45 @@
+.resume-card {
+    display: flex;
+    align-items: center;
+    width: 575px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+  
+.resume-card-left {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: -45px;
+}
+
+.resume-card-left p {
+    padding-bottom: 7px;
+}
+  
+.resume-card-left ul {
+    padding-left: 20px;
+}
+  
+.resume-card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.boring-resume-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 575px;
+    height: auto;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    gap: 1px;
+}

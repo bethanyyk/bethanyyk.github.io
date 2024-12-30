@@ -1,0 +1,27 @@
+.resume-page {
+    padding: 0 80px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+  
+.resume-page p {
+    text-align: center;
+}
+
+.internships h3,
+.extracurriculars h3,
+.courses h3 {
+    text-align: center;
+}
+
+.internships,
+.extracurriculars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: start;
+    align-items: stretch;
+    column-gap: 50px;
+    row-gap: 15px;
+    padding: 0px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,24 @@
+:root {
+  --primary-bg: #FFFEFC;
+  --primary-text: #253B47;
+  --primary-color: #C4D6F1;
+  --secondary-color-1: #B3B3EF;
+  --secondary-color-2: #D2EFC0;
+  --secondary-color-3: #F8D3B9;
+  --secondary-color-4: #EECAE6;
+  --secondary-color-5: #FBEAB0;
+  --secondary-color-6: #F9C3C3;
+  --secondary-color-7: #C4EBE0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}

@@ -1,0 +1,135 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    box-sizing: border-box;
+}
+  
+.say-hi-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 25px;
+}
+  
+.say-hi-box {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--primary-text);
+    color: var(--primary-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+.arrow {
+    font-size: 36px;
+    position: absolute;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-55%);
+}
+
+.email-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 15px;
+    background-color: #D44638;
+    outline: 3px #D44638 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.linkedin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 15px;
+    background-color: #0A66C2;
+    outline: 3px #0A66C2 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.github-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 15px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.email-button .text,
+.linkedin-button .text,
+.github-button .text
+ {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    transition: 400ms;
+}
+
+.email-button svg path,
+.linkedin-button svg path,
+.github-button svg path {
+    transition: 400ms;
+}
+
+.email-button:hover,
+.linkedin-button:hover,
+.github-button:hover {
+    background-color: transparent;
+}
+
+.linkedin-button:hover .text {
+    color: #0A66C2;
+}
+  
+.linkedin-button:hover svg path {
+    fill: #0A66C2;
+}
+  
+.github-button:hover .text {
+    color: #181717;
+}
+  
+.github-button:hover svg path {
+    fill: #181717;
+}
+
+.email-button:hover .text {
+    color: #D44638;
+}
+  
+.email-button:hover svg path {
+    fill: #D44638;
+}
+
+.plain {
+    text-decoration: none;
+}

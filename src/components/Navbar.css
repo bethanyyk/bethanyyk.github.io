@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding: 10px 35px;
+}
+  
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+}
+  
+.navbar ul li {
+    display: inline;
+}
+  
+.navbar ul li a {
+    color: var(--primary-text);
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.25);
+}
