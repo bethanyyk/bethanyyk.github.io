@@ -1,0 +1,74 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 390px;
+    margin: 20px 0px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+  
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card-image {
+    flex: 0 0 50%;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+}
+  
+.project-card-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+  
+.project-card-content {
+    padding-inline: 20px;
+}
+  
+.project-card-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card-categories {
+    margin-bottom: 20px;
+}
+
+.project-card-categories .category {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: var(--secondary-color-2);
+}
+
+.category.software-development {
+    background-color: var(--secondary-color-2);
+    color: #049372;
+}
+.category.biological-research {
+    background-color: var(--secondary-color-3);
+    color: #aa5d00;
+}
+.category.data-analysis {
+    background-color: var(--secondary-color-1);
+    color: #3a539b;
+}
+.category.ui-ux-design {
+    background-color: var(--secondary-color-5);
+    color: #8d6708;
+}
+.category.graphic-design {
+    background-color: var(--secondary-color-6);
+    color: #aa0000;
+}
+.category.writing {
+    background-color: var(--secondary-color-7);
+    color: #008080;
+}

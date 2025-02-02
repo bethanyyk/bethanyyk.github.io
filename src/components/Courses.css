@@ -1,0 +1,161 @@
+.radio-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: var(--primary-bg);
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px var(--primary-text);
+    padding: 0.25rem;
+}
+  
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+  
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: .5rem 0;
+    color: var(--primary-text);
+    transition: all .15s ease-in-out;
+}
+  
+.radio-inputs .radio input:checked + .name {
+    font-weight: 600;
+}
+
+.radio[data-category='computer-science'] input:checked + .name { background-color: var(--secondary-color-2); }
+.radio[data-category='mathematics'] input:checked + .name { background-color: var(--secondary-color-1); }
+.radio[data-category='cognitive-science'] input:checked + .name { background-color: var(--secondary-color-5); }
+.radio[data-category='linguistics'] input:checked + .name { background-color: var(--secondary-color-7); }
+.radio[data-category='life-sciences'] input:checked + .name { background-color: var(--secondary-color-3); }
+
+.courses {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: space-between;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 270px;
+    perspective: 1000px;
+    margin-block: 1rem;
+}
+  
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.flip-card-back {
+    justify-content: center;
+}
+
+.courses[data-category='computer-science'] .flip-card-front {
+    background: var(--secondary-color-2);
+    color: #049372;
+    border: 1px solid #049372;
+    border-radius: 1rem;
+}
+.courses[data-category='computer-science'] .flip-card-back {
+    background: #049372;
+    color: var(--secondary-color-2);
+    border: 1px solid var(--secondary-color-2);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+.courses[data-category='mathematics'] .flip-card-front {
+    background: var(--secondary-color-1);
+    color: #3a539b;
+    border: 1px solid #3a539b;
+    border-radius: 1rem;
+}
+.courses[data-category='mathematics'] .flip-card-back {
+    background: #3a539b;
+    color: var(--secondary-color-1);
+    border: 1px solid var(--secondary-color-1);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+.courses[data-category='cognitive-science'] .flip-card-front {
+    background: var(--secondary-color-5);
+    color: #8d6708;
+    border: 1px solid #8d6708;
+    border-radius: 1rem;
+}
+.courses[data-category='cognitive-science'] .flip-card-back {
+    background: #8d6708;
+    color: var(--secondary-color-5);
+    border: 1px solid var(--secondary-color-5);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+.courses[data-category='linguistics'] .flip-card-front {
+    background: var(--secondary-color-7);
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 1rem;
+}
+.courses[data-category='linguistics'] .flip-card-back {
+    background: #008080;
+    color: var(--secondary-color-7);
+    border: 1px solid var(--secondary-color-7);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+.courses[data-category='life-sciences'] .flip-card-front {
+    background: var(--secondary-color-3);
+    color: #aa5d00;
+    border: 1px solid #aa5d00;
+    border-radius: 1rem;
+}
+.courses[data-category='life-sciences'] .flip-card-back {
+    background: #aa5d00;
+    color: var(--secondary-color-3);
+    border: 1px solid var(--secondary-color-3);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}

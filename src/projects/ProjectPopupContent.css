@@ -1,0 +1,115 @@
+.popup-first-line {
+    margin-top: -20px;
+}
+/* Scripps Poster */
+.scripps-poster {
+    width: 100%;
+}
+
+/* ACM Design Requests */
+.acm-design-workshop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 570px);
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+/* ACM Design Requests */
+.ig-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 328px);
+    justify-content: space-between;
+}
+.drafts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 328px);
+    justify-content: space-between;
+}
+.drafts-grid img {
+    width: 328px;
+}
+
+/* Daily Bruin Articles */
+.style_card__2hnxE {
+    display: block;
+}
+.style_card__2hnxE a {
+    color: #0080c6;
+    text-decoration: none;
+}
+.css-1gw7wjv {
+    display: flex;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    height: 100%;
+    padding: 0px;
+    background-color: #ffffff;
+}
+.css-y6a5uj {
+    padding: 10px;
+    flex: 3;
+}
+.css-5yw8gm {
+    margin: 0 4px 0 0;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline;
+    vertical-align: middle;
+}
+.css-1fg4j61 {
+    border-left: 1px solid #000;
+    margin: 0;
+    padding-left: 4px;
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 14px;
+}
+.css-m9vgwi {
+    margin: 2px 0;
+    font-family: 'DM Serif Text', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: #000000;
+}
+.css-j61v0p {
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: #000000;
+}
+.css-yoisth {
+    margin: 4px 0 0;
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #000000;
+}
+.css-a21jgk {
+    flex-basis: 350px;
+    order: -1;
+    padding: 10px;
+}
+.css-1wkmtz6 {
+    height: 100%;
+    width: 100%;
+    padding-top: 66.66%;
+    overflow: hidden;
+    position: relative;
+    max-height: 0px;
+}
+.css-17kpb7x {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}

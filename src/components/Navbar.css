@@ -1,0 +1,36 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding-block: 10px;
+}
+  
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+  
+.navbar ul li {
+    display: inline;
+}
+  
+.navbar ul li a {
+    color: var(--primary-text);
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.25);
+}

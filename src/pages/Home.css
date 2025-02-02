@@ -1,0 +1,34 @@
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    min-height: 66vh;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.profile-picture {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-text);
+}
+
+.profile-right h1 {
+    margin-bottom: -5px;
+}
+
+.profile-right {
+    padding-top: 10px;
+}
