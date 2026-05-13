@@ -1,0 +1,857 @@
+/* Case study page primitives. Scoped to .cs-root. */
+
+.cs-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+.cs-back:hover { color: var(--ink); }
+
+.cs-nav-sections {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+.cs-section-link {
+  padding: 14px 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.cs-section-link:hover { color: var(--ink); }
+
+.cs-root {
+  --cs-accent: var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 56px 48px 96px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Section primitives */
+.cs-section { padding: 0; scroll-margin-top: 64px; }
+.cs-inner { width: 100%; }
+
+/* Default prose inside case study */
+.cs-root h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(36px, 4.4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.cs-root h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 32px 0 12px;
+}
+.cs-root h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cs-root p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.cs-root ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 8px 0 14px;
+}
+.cs-root li {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.cs-root li::before {
+  content: "—";
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* Hero ─────────────────────────────────────────────────────────────────── */
+.cs-hero { display: flex; flex-direction: column; gap: 18px; }
+.cs-hero-stripe { height: 2px; width: 64px; background: var(--cs-accent); }
+
+.cs-hero-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(56px, 8vw, 96px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0;
+}
+.cs-hero-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0;
+}
+.cs-hero-image {
+  margin-top: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+.cs-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CardsRow ─────────────────────────────────────────────────────────────── */
+.cs-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.cs-cards-row.has-four-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 780px) {
+  .cs-cards-row { grid-template-columns: 1fr; }
+}
+.cs-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cs-card-stripe { height: 2px; background: var(--cs-accent); margin: -22px -22px 4px -22px; }
+.cs-card-icon { font-size: 22px; line-height: 1; }
+.cs-card-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.cs-card-body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Quotes ───────────────────────────────────────────────────────────────── */
+.cs-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 24px 0;
+}
+.cs-quote {
+  display: flex;
+  gap: 14px;
+  max-width: 560px;
+  align-items: flex-start;
+}
+.cs-quote.right {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+.cs-quote-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.cs-quote-bubble {
+  background: var(--cs-accent);
+  color: #fff;
+  padding: 14px 16px;
+  flex: 1;
+}
+.cs-root .cs-quote-text {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.cs-root .cs-quote-role {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.78;
+  color: #fff;
+}
+
+/* Personas ─────────────────────────────────────────────────────────────── */
+.cs-personas {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 16px;
+}
+.cs-persona {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+.cs-persona-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.cs-persona-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+.cs-persona-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 28px;
+}
+@media (max-width: 780px) {
+  .cs-persona-grid { grid-template-columns: 1fr; }
+}
+.cs-persona-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-persona-kv-label,
+.cs-persona-block-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.cs-persona-kv-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--ink);
+}
+.cs-persona-block-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.cs-persona-block-list li {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.cs-persona-block-list li::before {
+  content: "—";
+  color: var(--border);
+  flex-shrink: 0;
+}
+
+/* Table ────────────────────────────────────────────────────────────────── */
+.cs-table-container {
+  margin: 16px 0;
+  overflow-x: auto;
+  border-top: 1px solid var(--border);
+}
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.cs-table th,
+.cs-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.cs-table th {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cs-table td {
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.65;
+}
+.cs-table td.cs-table-rowlabel {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--cs-accent);
+  letter-spacing: 0.04em;
+}
+.cs-table td ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.cs-table td li {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.cs-table td li::before {
+  content: "—";
+  color: var(--border);
+  flex-shrink: 0;
+}
+
+/* Steps ────────────────────────────────────────────────────────────────── */
+.cs-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 16px;
+}
+.cs-step {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+}
+.cs-step-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--cs-accent);
+  font-weight: 700;
+  padding-top: 6px;
+}
+.cs-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cs-step-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+/* Features ─────────────────────────────────────────────────────────────── */
+.cs-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 16px;
+}
+.cs-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+}
+.cs-feature:nth-child(even) .cs-feature-image { order: 2; }
+@media (max-width: 780px) {
+  .cs-feature,
+  .cs-feature:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .cs-feature:nth-child(even) .cs-feature-image { order: 0; }
+}
+.cs-feature-image {
+  overflow: hidden;
+}
+.cs-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cs-feature-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.cs-feature-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  white-space: pre-line;
+  margin: 0;
+}
+
+/* Inline visuals (preserve original class names in content blocks) ─────── */
+.cs-root .visual,
+.cs-root .cs-visual {
+  margin: 16px 0;
+}
+.cs-root .visual img,
+.cs-root .cs-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cs-root .cs-visual-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+.cs-root .cs-visual-split img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  display: block;
+}
+@media (max-width: 780px) {
+  .cs-root .cs-visual-split { grid-template-columns: 1fr; }
+}
+
+/* Presto logo split ────────────────────────────────────────────────────── */
+.cs-root .cs-logo-split {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  align-items: stretch;
+}
+
+.cs-root .cs-logo-split img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 320px;
+}
+
+@media (max-width: 780px) {
+  .cs-root .cs-logo-split { grid-template-columns: 1fr; max-height: 65vw; }
+}
+
+/* DENV-specific layouts (preserve class names from original) ─────────── */
+.cs-root .cs-split-barcode {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+.cs-root .cs-split-barcode img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-root .cs-split-freyja {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: 16px 0;
+}
+.cs-root .cs-split-freyja img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 780px) {
+  .cs-root .cs-split-barcode,
+  .cs-root .cs-split-freyja { grid-template-columns: 1fr; }
+}
+
+/* Competitor quadrants ─────────────────────────────────────────────────── */
+.cs-competitor {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.competitor-section {
+  position: relative;
+  padding: 16px 0 0;
+  overflow: visible;
+}
+.cs-competitor-grid {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 480px;
+  margin: 24px 0;
+}
+.cs-competitor-visual {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cs-competitor-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cs-quadrant {
+  position: absolute;
+  width: clamp(220px, 24%, 280px);
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  z-index: 2;
+}
+.cs-quadrant h3 {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--cs-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cs-quadrant ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.cs-quadrant li {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.cs-quadrant li::before { content: ""; }
+.cs-quadrant.q1 { top: 0;    right: -8%; }
+.cs-quadrant.q2 { top: 0;    left:  -8%; }
+.cs-quadrant.q3 { bottom: 0; left:  -8%; }
+.cs-quadrant.q4 { bottom: 0; right: -8%; }
+
+@media (max-width: 980px) {
+  .cs-competitor-grid {
+    grid-auto-rows: auto;
+    min-height: auto;
+    gap: 12px;
+  }
+  .cs-competitor-visual { width: 100%; max-width: 540px; }
+  .cs-quadrant {
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.cs-insights {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.cs-persona-section {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+/* Demo ─────────────────────────────────────────────────────────────────── */
+.cs-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  padding: 16px;
+}
+.cs-demo img {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  display: block;
+}
+
+/* Article list (Daily Bruin etc.) ─────────────────────────────────────── */
+.cs-article-intro {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.cs-article-group { margin-bottom: 40px; }
+.cs-article-group:last-child { margin-bottom: 0; }
+.cs-article-group-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--cs-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.cs-article-group-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cs-accent);
+  flex-shrink: 0;
+}
+.cs-article-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+  text-decoration: none;
+  color: inherit;
+}
+.cs-article-group .cs-article-row:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.cs-article-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  transition: color 0.15s;
+}
+.cs-article-row:hover .cs-article-title {
+  color: var(--cs-accent);
+}
+.cs-article-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.cs-article-cta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--cs-accent);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Coming soon ──────────────────────────────────────────────────────────── */
+.cs-coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 48px;
+  gap: 16px;
+}
+.cs-coming-soon-mark {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.cs-coming-soon-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.cs-coming-soon-body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 460px;
+}
+
+/* ── DENV: Stat row ──────────────────────────────────────────────────────
+   Four at-a-glance numbers across the top of the page.
+   ─────────────────────────────────────────────────────────────────────── */
+.cs-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  margin-top: 8px;
+}
+@media (max-width: 780px) {
+  .cs-stat-row { grid-template-columns: repeat(2, 1fr); }
+}
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 20px;
+  border-right: 1px solid var(--border);
+}
+.cs-stat:nth-child(4n) { border-right: none; }
+@media (max-width: 780px) {
+  .cs-stat:nth-child(2n)  { border-right: none; }
+  .cs-stat:nth-child(1),
+  .cs-stat:nth-child(2)   { border-bottom: 1px solid var(--border); }
+}
+.cs-stat-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--cs-accent);
+}
+.cs-stat-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ── DENV: Pipeline summary strip ────────────────────────────────────────
+   Horizontal overview of the four-stage workflow.
+   ─────────────────────────────────────────────────────────────────────── */
+.cs-pipeline-summary {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  margin-top: 36px;
+  overflow-x: auto;
+}
+.cs-pipeline-node {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 24px;
+  flex: 1;
+  min-width: 120px;
+  border-right: 1px solid var(--border);
+}
+.cs-pipeline-node:last-child { border-right: none; }
+.cs-pipeline-arrow {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--cs-accent);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+.cs-pipeline-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--cs-accent);
+  font-weight: 700;
+}
+.cs-pipeline-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* ── DENV: Simulation parameters grid ────────────────────────────────────
+   Three configurable knobs shown side-by-side.
+   ─────────────────────────────────────────────────────────────────────── */
+.cs-sim-params {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  margin: 24px 0;
+}
+@media (max-width: 780px) {
+  .cs-sim-params { grid-template-columns: 1fr; }
+}
+.cs-sim-param {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 20px;
+  border-right: 1px solid var(--border);
+}
+.cs-sim-param:last-child { border-right: none; }
+@media (max-width: 780px) {
+  .cs-sim-param { border-right: none; border-bottom: 1px solid var(--border); }
+  .cs-sim-param:last-child { border-bottom: none; }
+}
+.cs-sim-param-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cs-accent);
+}
+.cs-sim-param-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--muted);
+}

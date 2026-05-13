@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+    }
+  </style>
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-size="78">
+    ✦
+  </text>
+</svg>
