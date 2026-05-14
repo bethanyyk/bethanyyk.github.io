@@ -1,6 +1,16 @@
 export const PROJECTS = [
-  {
+    {
     id: 1,
+    slug: "daily-bruin",
+    title: "Daily Bruin",
+    categories: ["data", "writing"],
+    year: "Fall 2023 - Present",
+    desc: "Data journalism and graphics for The Daily Bruin. Turning university data into stories worth telling.",
+    image: "/images/work/daily-bruin/the-stack.png",
+    imgH: 330,
+  },
+  {
+    id: 2,
     slug: "presto",
     title: "Presto",
     categories: ["design"],
@@ -9,8 +19,18 @@ export const PROJECTS = [
     image: "/images/work/presto/banner.png",
     imgH: 300,
   },
+    {
+    id: 3,
+    slug: "bruin-sports-analytics",
+    title: "Bruin Sports Analytics",
+    categories: ["data", "writing"],
+    year: "Fall 2024 - Spring 2025",
+    desc: "Data-driven sports journalism for Bruin Sports Analytics. Exploring the numbers behind the games.",
+    image: "/images/work/bruin-sports-analytics/data-journalism.png",
+    imgH: 310,
+  },
   {
-    id: 2,
+    id: 4,
     slug: "denv-surveillance",
     title: "DENV Surveillance",
     categories: ["research", "data"],
@@ -19,14 +39,4 @@ export const PROJECTS = [
     image: "/images/work/denv/poster.png",
     imgH: 400,
   },
-  {
-    id: 3,
-    slug: "daily-bruin",
-    title: "Daily Bruin",
-    categories: ["data", "writing"],
-    year: "Fall 2023 - Present",
-    desc: "Data journalism and graphics for The Daily Bruin. Turning university data into stories worth telling.",
-    image: "/images/work/daily-bruin/the-stack.png",
-    imgH: 330,
-  }
 ];

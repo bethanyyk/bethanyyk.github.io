@@ -89,6 +89,7 @@ export const ORGS = [
   {
     org: "Bruin Sports Analytics",
     role: "Data Journalist",
+    projectSlug: "bruin-sports-analytics",
     logo: "/images/resume/bruin_sports_analytics_logo.jpg",
     bullets: [
       "Leveraged statistical methods and data science to uncover insights and translate them into engaging narratives for a general audience.",
@@ -121,6 +122,7 @@ export const ORGS = [
   {
     org: "The Daily Bruin",
     role: "Data Journalist",
+    projectSlug: "daily-bruin",
     logo: "/images/resume/daily_bruin_logo.png",
     bullets: [
       "Collaborated with editors and reporters to find data-driven narratives within university and local government records.",

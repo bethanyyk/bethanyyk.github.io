@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Presto from "./projects/Presto";
-import DENVSurveillance from "./projects/DENVSurveillance";
 import DailyBruin from "./projects/DailyBruin";
+import Presto from "./projects/Presto";
+import BruinSportsAnalytics from "./projects/BruinSportsAnalytics";
+import DENVSurveillance from "./projects/DENVSurveillance";
 
 const PAGES = {
-  "presto":            Presto,
+  "daily-bruin": DailyBruin,
+  "presto": Presto,
+  "bruin-sports-analytics": BruinSportsAnalytics,
   "denv-surveillance": DENVSurveillance,
-  "daily-bruin": DailyBruin
 };
 
 export default function ProjectDetail() {
