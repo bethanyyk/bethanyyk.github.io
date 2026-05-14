@@ -288,7 +288,6 @@ export default function Presto() {
 
       <main className="cs-root" style={{ "--cs-accent": "#1E1F65" }}>
         <Hero
-          title="Presto"
           imageSrc="/images/work/presto/hero.png"
         />
 

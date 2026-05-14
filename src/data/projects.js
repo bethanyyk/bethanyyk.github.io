@@ -18,5 +18,15 @@ export const PROJECTS = [
     desc: "Implementing wastewater analysis for dengue virus surveillance. Addressing the most common viral disease transmitted by arthropod vectors.",
     image: "/images/work/denv/poster.png",
     imgH: 400,
+  },
+  {
+    id: 3,
+    slug: "daily-bruin",
+    title: "Daily Bruin",
+    categories: ["data", "writing"],
+    year: "Fall 2023 - Present",
+    desc: "Data journalism and graphics for The Daily Bruin. Turning university data into stories worth telling.",
+    image: "/images/work/daily-bruin/the-stack.png",
+    imgH: 330,
   }
 ];

@@ -34,7 +34,6 @@ export default function Sidebar({ activeFilter, setActiveFilter, counts, isMobil
             <Link key={id} to={path} className={`nav-btn${active ? " active" : ""}`} onClick={onClose}>
               <span className="nav-index">{idx}</span>
               <span style={{ flex: 1 }}>{label}</span>
-              {active && <div style={{ width: 18, height: 1.5, background: ACCENT, borderRadius: 1 }}/>}
             </Link>
           );
         })}

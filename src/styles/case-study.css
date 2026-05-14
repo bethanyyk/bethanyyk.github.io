@@ -444,10 +444,11 @@
   margin: 0;
 }
 
-/* Inline visuals (preserve original class names in content blocks) ─────── */
+/* Inline visuals ──────────────────────────────────────────────────────── */
 .cs-root .visual,
 .cs-root .cs-visual {
   margin: 16px 0;
+  width: 100%;
 }
 .cs-root .visual img,
 .cs-root .cs-visual img {
@@ -491,7 +492,7 @@
   .cs-root .cs-logo-split { grid-template-columns: 1fr; max-height: 65vw; }
 }
 
-/* DENV-specific layouts (preserve class names from original) ─────────── */
+/* DENV-specific layouts  ───────────────────────────────────────────────── */
 .cs-root .cs-split-barcode {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -601,11 +602,7 @@
   }
 }
 
-.cs-insights {
-  margin-top: 32px;
-  border-top: 1px solid var(--border);
-  padding-top: 28px;
-}
+.cs-insights,
 .cs-persona-section {
   margin-top: 32px;
   border-top: 1px solid var(--border);
@@ -627,114 +624,7 @@
   display: block;
 }
 
-/* Article list (Daily Bruin etc.) ─────────────────────────────────────── */
-.cs-article-intro {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--muted);
-  max-width: 640px;
-  margin-bottom: 48px;
-}
-.cs-article-group { margin-bottom: 40px; }
-.cs-article-group:last-child { margin-bottom: 0; }
-.cs-article-group-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: var(--cs-accent);
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 4px;
-}
-.cs-article-group-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--cs-accent);
-  flex-shrink: 0;
-}
-.cs-article-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  align-items: start;
-  text-decoration: none;
-  color: inherit;
-}
-.cs-article-group .cs-article-row:last-child {
-  border-bottom: 1px solid var(--border);
-}
-.cs-article-title {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 19px;
-  font-weight: 400;
-  color: var(--ink);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
-  transition: color 0.15s;
-}
-.cs-article-row:hover .cs-article-title {
-  color: var(--cs-accent);
-}
-.cs-article-desc {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-.cs-article-cta {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--cs-accent);
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  padding-top: 3px;
-  flex-shrink: 0;
-}
-
-/* Coming soon ──────────────────────────────────────────────────────────── */
-.cs-coming-soon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 48px;
-  gap: 16px;
-}
-.cs-coming-soon-mark {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-.cs-coming-soon-title {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-.cs-coming-soon-body {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 460px;
-}
-
-/* ── DENV: Stat row ──────────────────────────────────────────────────────
-   Four at-a-glance numbers across the top of the page.
-   ─────────────────────────────────────────────────────────────────────── */
+/* ── DENV: Stat row ────────────────────────────────────────────────────── */
 .cs-stat-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -773,9 +663,7 @@
   line-height: 1.55;
 }
 
-/* ── DENV: Pipeline summary strip ────────────────────────────────────────
-   Horizontal overview of the four-stage workflow.
-   ─────────────────────────────────────────────────────────────────────── */
+/* ── DENV: Pipeline summary strip ──────────────────────────────────────── */
 .cs-pipeline-summary {
   display: flex;
   align-items: stretch;
@@ -817,9 +705,7 @@
   color: var(--ink);
 }
 
-/* ── DENV: Simulation parameters grid ────────────────────────────────────
-   Three configurable knobs shown side-by-side.
-   ─────────────────────────────────────────────────────────────────────── */
+/* ── DENV: Simulation parameters grid ──────────────────────────────────── */
 .cs-sim-params {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -854,4 +740,140 @@
   font-size: 12px;
   line-height: 1.75;
   color: var(--muted);
+}
+
+/* Articles Grid ────────────────────────────────────────────────────────── */
+.articles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.article-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.article-card:hover {
+  border-color: var(--cs-accent);
+}
+
+@media (max-width: 780px) {
+  .article-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article-image-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.article-content {
+  padding: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2.article-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 12px 0 !important;
+}
+.article-card:hover .article-title {
+  color: var(--cs-accent);
+}
+
+.article-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin: 0 !important;
+}
+
+.article-takeaways {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.article-takeaways h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.article-takeaways ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.article-takeaways li {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.article-takeaways li:last-child {
+  margin-bottom: 0;
+}
+.article-takeaways li::before {
+  content: "•";
+  color: var(--cs-accent);
+  flex-shrink: 0;
+}
+
+.article-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--cs-accent);
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: auto;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+.article-link:hover {
+  color: var(--ink);
 }

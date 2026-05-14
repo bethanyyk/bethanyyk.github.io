@@ -132,7 +132,6 @@ export default function DENVSurveillance() {
 
         {/* ── Hero ──────────────────────────────────────────────────────── */}
         <Hero
-          title="DENV Surveillance"
           imageSrc="/images/work/denv/poster.png"
         />
 
