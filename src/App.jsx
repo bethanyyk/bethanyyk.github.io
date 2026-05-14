@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Work from "./pages/Work";
 import Play from "./pages/Play";
@@ -13,7 +13,16 @@ import "./styles/globals.css";
 function Shell() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(search);
+    const redirectPath = params.get('p');
+    if (redirectPath) {
+      navigate(redirectPath, { replace: true });
+    }
+  }, [search, navigate]);
 
   useEffect(() => {
     setIsMobileOpen(false);
